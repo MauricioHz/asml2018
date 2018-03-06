@@ -1,0 +1,7 @@
+
+- Parámetros de estado
+1 Pendiente
+2 Seguimiento
+3 Cerrada
+4 Fuera de plazo
+
