@@ -21,8 +21,10 @@ Proveedor
 Solicitud
 DetalleSolicitud
 FormaPagoSolicitud
-DetalleAreaSolicitud
-DetalleTipoCompraSolicitud
+RecepcionProductoServicio
+FlujoAutorizaciones -- almacena fecha y hora de la autorizacion y notificacion.
+Usuario
+Perfil
 
 -- ---------------------------------------------------
 -- PARAMATROS
