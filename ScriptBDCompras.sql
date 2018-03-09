@@ -6,15 +6,18 @@
 
 -- Parametros
 
-TipoSolicitud
-TipoDocumento
-Banco
-TipoCuentaBanco
-TipoFormaPago
-TipoCondicionPago
-TipoPlazoPago
-TipoArea
-TipoCompra
+TipoSolicitud --> enduro en REST
+TipoDocumento --> enduro en REST
+Banco --> enduro en REST
+TipoCuentaBanco --> enduro en REST
+TipoFormaPago --> enduro en REST
+TipoCondicionPago --> enduro en REST
+TipoPlazoPago --> enduro en REST
+TipoArea --> enduro en REST
+TipoCompra --> enduro en REST
+TipoMoneda --> enduro en REST
+
+-- * --> enduro en REST Si es necesario crear toda la funcionalidad.
 
 -- Repositorios
 Proveedor
