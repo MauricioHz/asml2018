@@ -28,7 +28,18 @@ RecepcionProductoServicio
 FlujoAutorizaciones -- almacena fecha y hora de la autorizacion y notificacion.
 Usuario
 Perfil
+-- ---------------------------------------------------
+-- PARAMATROS para version simplificada.
+-- ---------------------------------------------------
+CREATE TABLE Proveedor(
+id
+rut_proveedor
+razon_social
+	
+);
 
+
+-- // Fin version simplificada
 -- ---------------------------------------------------
 -- PARAMATROS
 -- ---------------------------------------------------
@@ -80,7 +91,6 @@ CREATE TABLE compra_tipo_cuenta(
 
 CREATE TABLE compra_tipo_solicitud(
 	id int not null AUTO_INCREMENT,
-	empresa_id int not null,
 	descripcion varchar(100) not null,
 	vigente int not null DEFAULT 1,
 	updated_at datetime NOT NULL,
