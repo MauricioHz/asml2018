@@ -107,6 +107,19 @@ CREATE TABLE compra_recepcion_solicitud (
   PRIMARY KEY(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+CREATE TABLE compra_autorizacion (
+  id int(6) NOT NULL,
+  solicitud_id int(6) DEFAULT NULL,
+  fecha_autoriza_jefatura datetime,
+  autoriza_jefatura int(6) NOT NULL DEFAULT 0,  
+  fecha_autoriza_finanza datetime,
+  autoriza_finanza int(6) NOT NULL DEFAULT 0,
+  fecha_autoriza_gerencia datetime,
+  autoriza_gerencia int(6) NOT NULL DEFAULT 0,
+  vigente int not null DEFAULT 1,
+  PRIMARY KEY(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
 -- // Fin version simplificada
 -- *******************************************************************************************
 -- *******************************************************************************************
