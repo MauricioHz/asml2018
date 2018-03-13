@@ -38,8 +38,30 @@ razon_social
 	
 );
 
+-- ---------------------------------------------------
+-- tablas para version simplificada
+-- ---------------------------------------------------
+
+CREATE TABLE compra_solicitud(
+id int not null AUTO_INCREMENT,
+
+vigente int not null DEFAULT 1,
+PRIMARY KEY(id)
+);
+
+CREATE TABLE compra_solicitud_detalle(
+id int not null AUTO_INCREMENT,
+
+vigente int not null DEFAULT 1,
+PRIMARY KEY(id)
+);
 
 -- // Fin version simplificada
+-- *******************************************************************************************
+-- *******************************************************************************************
+-- *******************************************************************************************
+
+
 -- ---------------------------------------------------
 -- PARAMATROS
 -- ---------------------------------------------------
