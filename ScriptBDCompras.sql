@@ -53,11 +53,11 @@ razon_social
 -- ---------------------------------------------------
 DROP TABLE compra_solicitud;
 DROP TABLE compra_solicitud_detalle;
-DROP TABLE compra_recepcion_solicitud;
+DROP TABLE compra_solicitud_recepcion;
 DROP TABLE compra_autorizacion; 
 DROP TABLE compra_proveedor; 
-DROP TABLE proveedor_iso; 
-DROP TABLE app_perfil_usuario ;
+DROP TABLE compra_proveedor_iso; 
+DROP TABLE app_usuario_perfil ;
 DROP TABLE app_usuario; 
 DROP TABLE app_empresa;
 
@@ -111,7 +111,7 @@ CREATE TABLE compra_solicitud_detalle (
   PRIMARY KEY(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
-CREATE TABLE compra_recepcion_solicitud (
+CREATE TABLE compra_solicitud_recepcion (
   id int(6) NOT NULL,
   solicitud_id int(6) DEFAULT NULL,
   fecha date DEFAULT NULL,
@@ -160,7 +160,7 @@ CREATE TABLE compra_proveedor (
   PRIMARY KEY(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
-CREATE TABLE proveedor_iso (
+CREATE TABLE compra_proveedor_iso (
   id int(4) NOT NULL,
   rut int(8) NOT NULL DEFAULT '0',
   pagina_web varchar(60) COLLATE utf8_spanish_ci DEFAULT NULL,
@@ -191,7 +191,7 @@ CREATE TABLE app_perfil_usuario(
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 CREATE TABLE app_usuario (
-  id_usuario int(2) NOT NULL,
+  id int(2) NOT NULL,
   usuario varchar(20) COLLATE utf8_spanish_ci DEFAULT NULL,
   clave varchar(4) COLLATE utf8_spanish_ci DEFAULT NULL,
   clave2 varchar(60) COLLATE utf8_spanish_ci DEFAULT NULL,
