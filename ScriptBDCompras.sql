@@ -219,6 +219,13 @@ CREATE TABLE app_empresa(
 	PRIMARY KEY(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+-- DATOS
+
+INSERT INTO `app_empresa` (`id`, `rut`, `dv`, `razon_social`, `descripcion`, `vigente`) 
+VALUES 
+(NULL, '96651330', '6', 'AGRICOLA SANTA MARTA DE LIRAY SA.', 'EMPRESA AGRICOLA', '1'), 
+(NULL, '14127721', '9', 'MAURICIOHZ', 'EMPRESA INFORMATICA', '1')
+
 -- // Fin version simplificada
 -- *******************************************************************************************
 -- *******************************************************************************************
