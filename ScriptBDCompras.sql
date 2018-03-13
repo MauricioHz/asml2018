@@ -1,5 +1,14 @@
 -- COMPRAS
 
+--> Script debe contener
+/*
+- tablas de parametros
+- tablas finales
+- llave foranea
+- registros para insertar parametos
+- registros para insertar de prueba tablas finales
+*/
+
 -- -------------------------------------------------------------------------------------------
 -- TABLAS
 -- -------------------------------------------------------------------------------------------
