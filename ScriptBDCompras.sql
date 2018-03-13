@@ -51,6 +51,15 @@ razon_social
 -- ---------------------------------------------------
 -- tablas para version simplificada
 -- ---------------------------------------------------
+DROP TABLE compra_solicitud;
+DROP TABLE compra_solicitud_detalle;
+DROP TABLE compra_recepcion_solicitud;
+DROP TABLE compra_autorizacion; 
+DROP TABLE compra_proveedor; 
+DROP TABLE proveedor_iso; 
+DROP TABLE app_perfil_usuario ;
+DROP TABLE app_usuario; 
+DROP TABLE app_empresa;
 
 CREATE TABLE `compra_solicitud` (
   id int(6) NOT NULL,
@@ -129,8 +138,7 @@ CREATE TABLE compra_autorizacion (
   PRIMARY KEY(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
-
-CREATE TABLE `oc_proveedor` (
+CREATE TABLE compra_proveedor (
   id int(4) NOT NULL,
   rut int(8) NOT NULL DEFAULT '0',
   dv varchar(1) COLLATE utf8_spanish_ci DEFAULT NULL,
