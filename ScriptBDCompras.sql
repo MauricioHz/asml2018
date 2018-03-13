@@ -45,8 +45,8 @@ razon_social
 CREATE TABLE `compra_solicitud` (
   id int(6) NOT NULL,
   fecha date DEFAULT NULL,
-  proveedor_rut int(8) NOT NULL DEFAULT NULL,
-  proveedor_rut_dv varchar(1) NOT NULL COLLATE utf8_spanish_ci DEFAULT NULL,
+  proveedor_rut int(8) DEFAULT NULL,
+  proveedor_rut_dv varchar(1) COLLATE utf8_spanish_ci DEFAULT NULL,
   proveedor_nombre varchar(60) COLLATE utf8_spanish_ci DEFAULT NULL,
   proveedor_direccion varchar(60) COLLATE utf8_spanish_ci DEFAULT NULL,
   proveedor_comuna varchar(30) COLLATE utf8_spanish_ci DEFAULT NULL,
@@ -56,13 +56,10 @@ CREATE TABLE `compra_solicitud` (
   proveedor_email varchar(60) COLLATE utf8_spanish_ci DEFAULT NULL,
   proveedor_contacto varchar(60) COLLATE utf8_spanish_ci DEFAULT NULL,
   tipo_solicitud varchar(30) COLLATE utf8_spanish_ci DEFAULT NULL,
-  tipo_area_solicitud varchar(250) COLLATE utf8_spanish_ci DEFAULT NULL,
-  tipo_compra_solicitud varchar(250) COLLATE utf8_spanish_ci DEFAULT NULL,
   solicitante varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
   jefe_autoriza varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
   archivo_uno varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
   archivo_dos varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
-  usuario varchar(30) COLLATE utf8_spanish_ci DEFAULT NULL,
   neto decimal(16,6) DEFAULT NULL,
   iva decimal(16,6) DEFAULT NULL,
   exento decimal(16,6) DEFAULT NULL,
@@ -75,12 +72,25 @@ CREATE TABLE `compra_solicitud` (
   PRIMARY KEY(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
-CREATE TABLE compra_solicitud_detalle(
-id int not null AUTO_INCREMENT,
 
-vigente int not null DEFAULT 1,
-PRIMARY KEY(id)
-);
+CREATE TABLE compra_solicitud_detalle (
+  id int(6) NOT NULL,
+  solicitud_id int(6) DEFAULT NULL,
+  tipo_area_id int(6) NOT NULL,
+  tipo_compra_id int(6) NOT NULL,
+  producto varchar(200) COLLATE utf8_spanish_ci DEFAULT NULL,
+  descripcion varchar(200) COLLATE utf8_spanish_ci DEFAULT NULL,
+  unidad varchar(30) COLLATE utf8_spanish_ci DEFAULT NULL,
+  cantidad decimal(16,6) DEFAULT NULL,
+  exento decimal(16,6) DEFAULT NULL, 
+  precio decimal(16,6) DEFAULT NULL,
+  total decimal(16,6) DEFAULT NULL,
+  vigente int not null DEFAULT 1,
+  updated_at datetime NOT NULL,
+  created_at datetime NOT NULL,
+  deleted_at datetime NOT NULL,
+  PRIMARY KEY(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- // Fin version simplificada
 -- *******************************************************************************************
