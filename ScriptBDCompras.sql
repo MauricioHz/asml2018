@@ -16,6 +16,7 @@ TipoPlazoPago --> enduro en REST
 TipoArea --> tabla db
 TipoCompra --> tabla db
 TipoMoneda --> enduro en REST
+TipoEstadoRecepcion --> enduro en REST
 
 -- * --> enduro en REST Si es necesario crear toda la funcionalidad.
 
@@ -85,6 +86,20 @@ CREATE TABLE compra_solicitud_detalle (
   exento decimal(16,6) DEFAULT NULL, 
   precio decimal(16,6) DEFAULT NULL,
   total decimal(16,6) DEFAULT NULL,
+  vigente int not null DEFAULT 1,
+  updated_at datetime NOT NULL,
+  created_at datetime NOT NULL,
+  deleted_at datetime NOT NULL,
+  PRIMARY KEY(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+CREATE TABLE compra_recepcion_solicitud (
+  id int(6) NOT NULL,
+  solicitud_id int(6) DEFAULT NULL,
+  fecha date DEFAULT NULL,
+  usuario_recibe int(6) NOT NULL,
+  estado_recepcion int(1) NOT NULL,
+  observaciones varchar(400) COLLATE utf8_spanish_ci NOT NULL,
   vigente int not null DEFAULT 1,
   updated_at datetime NOT NULL,
   created_at datetime NOT NULL,
