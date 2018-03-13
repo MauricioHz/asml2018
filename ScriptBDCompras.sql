@@ -45,8 +45,8 @@ razon_social
 CREATE TABLE `compra_solicitud` (
   id int(6) NOT NULL,
   fecha date DEFAULT NULL,
-  proveedor_rut int(8) DEFAULT NULL,
-  proveedor_rut_dv varchar(1) COLLATE utf8_spanish_ci DEFAULT NULL,
+  proveedor_rut int(8) NOT NULL DEFAULT NULL,
+  proveedor_rut_dv varchar(1) NOT NULL COLLATE utf8_spanish_ci DEFAULT NULL,
   proveedor_nombre varchar(60) COLLATE utf8_spanish_ci DEFAULT NULL,
   proveedor_direccion varchar(60) COLLATE utf8_spanish_ci DEFAULT NULL,
   proveedor_comuna varchar(30) COLLATE utf8_spanish_ci DEFAULT NULL,
