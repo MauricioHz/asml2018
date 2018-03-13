@@ -120,6 +120,7 @@ CREATE TABLE compra_autorizacion (
   PRIMARY KEY(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+
 CREATE TABLE `oc_proveedor` (
   id int(4) NOT NULL,
   rut int(8) NOT NULL DEFAULT '0',
@@ -159,6 +160,46 @@ CREATE TABLE proveedor_iso (
   giro varchar(60) COLLATE utf8_spanish_ci DEFAULT NULL,
   extranjero varchar(5) COLLATE utf8_spanish_ci NOT NULL,
   vigente int(1) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+CREATE TABLE app_perfil_usuario(
+	id int not null AUTO_INCREMENT,
+	empresa_id int not null,
+	descripcion varchar(100) not null,
+	vigente int not null DEFAULT 1,
+	updated_at datetime NOT NULL,
+  	created_at datetime NOT NULL,
+	deleted_at datetime NOT NULL,
+	PRIMARY KEY(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+CREATE TABLE app_usuario (
+  id_usuario int(2) NOT NULL,
+  usuario varchar(20) COLLATE utf8_spanish_ci DEFAULT NULL,
+  clave varchar(4) COLLATE utf8_spanish_ci DEFAULT NULL,
+  clave2 varchar(60) COLLATE utf8_spanish_ci DEFAULT NULL,
+  nombre_usuario varchar(30) COLLATE utf8_spanish_ci DEFAULT NULL,
+  cargo_id varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  correo varchar(25) COLLATE utf8_spanish_ci DEFAULT NULL,
+  perfil_id varchar(20) COLLATE utf8_spanish_ci DEFAULT NULL,
+  modulo_oc varchar(4) COLLATE utf8_spanish_ci DEFAULT NULL,
+  modulo_nc varchar(4) COLLATE utf8_spanish_ci DEFAULT NULL,
+  modulo_ot varchar(4) COLLATE utf8_spanish_ci NOT NULL,
+  vigente int not null DEFAULT 1,
+  updated_at datetime NOT NULL,
+  created_at datetime NOT NULL,
+  deleted_at datetime NOT NULL,
+  PRIMARY KEY(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+CREATE TABLE app_empresa(
+	id int(2) not null AUTO_INCREMENT,
+	rut int(8) not null,
+	dv varchar(1) not null,
+	razon_social varchar(200) not null,
+	descripcion varchar(200) not null,
+	vigente int not null DEFAULT 1,
+	PRIMARY KEY(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- // Fin version simplificada
