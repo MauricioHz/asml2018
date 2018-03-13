@@ -120,6 +120,47 @@ CREATE TABLE compra_autorizacion (
   PRIMARY KEY(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+CREATE TABLE `oc_proveedor` (
+  id int(4) NOT NULL,
+  rut int(8) NOT NULL DEFAULT '0',
+  dv varchar(1) COLLATE utf8_spanish_ci DEFAULT NULL,
+  razon_social varchar(60) COLLATE utf8_spanish_ci DEFAULT NULL,
+  nombre_comercial varchar(60) COLLATE utf8_spanish_ci DEFAULT NULL,
+  direccion varchar(60) COLLATE utf8_spanish_ci DEFAULT NULL,
+  comuna varchar(40) COLLATE utf8_spanish_ci DEFAULT NULL,
+  ciudad varchar(40) COLLATE utf8_spanish_ci DEFAULT NULL,
+  fono varchar(20) COLLATE utf8_spanish_ci DEFAULT NULL,
+  fax varchar(20) COLLATE utf8_spanish_ci DEFAULT NULL,
+  email varchar(60) COLLATE utf8_spanish_ci DEFAULT NULL,
+  email_contacto varchar(60) COLLATE utf8_spanish_ci NOT NULL,
+  contacto varchar(40) COLLATE utf8_spanish_ci DEFAULT NULL,
+  observaciones varchar(400) COLLATE utf8_spanish_ci NOT NULL,
+  vigente int not null DEFAULT 1,
+  updated_at datetime NOT NULL,
+  created_at datetime NOT NULL,
+  deleted_at datetime NOT NULL,
+  PRIMARY KEY(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+CREATE TABLE proveedor_iso (
+  id int(4) NOT NULL,
+  rut int(8) NOT NULL DEFAULT '0',
+  pagina_web varchar(60) COLLATE utf8_spanish_ci DEFAULT NULL,
+  tipo_insumo varchar(60) COLLATE utf8_spanish_ci DEFAULT NULL,
+  aprobador_interno varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
+  fecha_ingreso date DEFAULT NULL,
+  fecha_aprobacion date DEFAULT NULL,
+  monto_plazo varchar(60) COLLATE utf8_spanish_ci DEFAULT NULL,
+  acreditacion varchar(60) COLLATE utf8_spanish_ci DEFAULT NULL,
+  horario varchar(60) COLLATE utf8_spanish_ci DEFAULT NULL,
+  tiempo_entrega varchar(30) COLLATE utf8_spanish_ci DEFAULT NULL,
+  ficha_tecnica varchar(30) COLLATE utf8_spanish_ci DEFAULT NULL,
+  devoluciones varchar(30) COLLATE utf8_spanish_ci NOT NULL,
+  giro varchar(60) COLLATE utf8_spanish_ci DEFAULT NULL,
+  extranjero varchar(5) COLLATE utf8_spanish_ci NOT NULL,
+  vigente int(1) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
 -- // Fin version simplificada
 -- *******************************************************************************************
 -- *******************************************************************************************
