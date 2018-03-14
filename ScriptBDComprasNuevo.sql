@@ -7,7 +7,6 @@ DROP TABLE IF EXISTS compra_proveedor;
 DROP TABLE IF EXISTS compra_proveedor_iso; 
 DROP TABLE IF EXISTS app_usuario_perfil ;
 DROP TABLE IF EXISTS app_usuario; 
-DROP TABLE IF EXISTS app_empresa;
 
 -- tablas de parametros
 DROP TABLE IF EXISTS compra_tipo_cargo;
@@ -139,7 +138,7 @@ CREATE TABLE compra_proveedor_iso (
   vigente int(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
-CREATE TABLE app_perfil_usuario(
+CREATE TABLE app_usuario_perfil(
 	id int not null AUTO_INCREMENT,
 	descripcion varchar(100) not null,
 	vigente int not null DEFAULT 1,
