@@ -248,7 +248,20 @@ CREATE TABLE app_empresa(
 	PRIMARY KEY(id)
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE compra_cargo(
+
+-->
+DROP TABLE compra_tipo_cargo;
+DROP TABLE compra_tipo_documento;
+DROP TABLE compra_tipo_solicitud;
+DROP TABLE compra_tipo_cuenta;
+DROP TABLE compra_tipo_compra;
+DROP TABLE compra_banco;
+DROP TABLE compra_tipo_condicion;
+DROP TABLE compra_tipo_moneda;
+DROP TABLE compra_tipo_medida;
+DROP TABLE compra_tipo_area;
+
+CREATE TABLE compra_tipo_cargo(
 	id int not null AUTO_INCREMENT,
 	empresa_id int not null,
 	descripcion varchar(100) not null,
@@ -313,7 +326,7 @@ CREATE TABLE compra_banco(
 	PRIMARY KEY(id)
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE compra_condicion_pago(
+CREATE TABLE compra_tipo_condicion(
 	id int not null AUTO_INCREMENT,
 	empresa_id int not null,
 	descripcion varchar(100) not null,
@@ -335,7 +348,8 @@ CREATE TABLE compra_tipo_moneda(
 	PRIMARY KEY(id)
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE compra_plazo_pago(
+DROP TABLE compra_tipo_plazo;
+CREATE TABLE compra_tipo_plazo(
 	id int not null AUTO_INCREMENT,
 	empresa_id int not null,
 	descripcion varchar(100) not null,
@@ -346,7 +360,7 @@ CREATE TABLE compra_plazo_pago(
 	PRIMARY KEY(id)
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE compra_unidad_medida(
+CREATE TABLE compra_tipo_medida(
 	id int not null AUTO_INCREMENT,
 	empresa_id int not null,
 	descripcion varchar(100) not null,
@@ -357,29 +371,7 @@ CREATE TABLE compra_unidad_medida(
 	PRIMARY KEY(id)
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE compra_envio_correo(
-	id int not null AUTO_INCREMENT,
-	empresa_id int not null,
-	descripcion varchar(100) not null,
-	vigente int not null DEFAULT 1,
-	updated_at datetime NOT NULL,
-  	created_at datetime NOT NULL,
-	deleted_at datetime NOT NULL,
-	PRIMARY KEY(id)
-)ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-CREATE TABLE compra_perfil_usuario(
-	id int not null AUTO_INCREMENT,
-	empresa_id int not null,
-	descripcion varchar(100) not null,
-	vigente int not null DEFAULT 1,
-	updated_at datetime NOT NULL,
-  	created_at datetime NOT NULL,
-	deleted_at datetime NOT NULL,
-	PRIMARY KEY(id)
-)ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-CREATE TABLE compra_area(
+CREATE TABLE compra_tipo_area(
 	id int not null AUTO_INCREMENT,
 	empresa_id int not null,
 	descripcion varchar(100) not null,
