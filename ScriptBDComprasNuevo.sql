@@ -1,3 +1,15 @@
+/*
+DROP TABLE IF EXISTS compra_tipo_cargo;
+DROP TABLE IF EXISTS compra_tipo_documento;
+DROP TABLE IF EXISTS compra_tipo_solicitud;
+DROP TABLE IF EXISTS compra_tipo_cuenta;
+DROP TABLE IF EXISTS compra_tipo_compra;
+DROP TABLE IF EXISTS compra_tipo_banco;
+DROP TABLE IF EXISTS compra_tipo_condicion;
+DROP TABLE IF EXISTS compra_tipo_moneda;
+DROP TABLE IF EXISTS compra_tipo_medida;
+DROP TABLE IF EXISTS compra_tipo_area;
+*/
 
 CREATE TABLE `compra_solicitud` (
   id int(6) NOT NULL,
@@ -147,30 +159,9 @@ CREATE TABLE app_usuario (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
--- DATOS
-
-
--- // Fin version simplificada
--- *******************************************************************************************
--- *******************************************************************************************
--- *******************************************************************************************
-
-
 -- ---------------------------------------------------
 -- PARAMATROS
 -- ---------------------------------------------------
-/*
-DROP TABLE IF EXISTS compra_tipo_cargo;
-DROP TABLE IF EXISTS compra_tipo_documento;
-DROP TABLE IF EXISTS compra_tipo_solicitud;
-DROP TABLE IF EXISTS compra_tipo_cuenta;
-DROP TABLE IF EXISTS compra_tipo_compra;
-DROP TABLE IF EXISTS compra_tipo_banco;
-DROP TABLE IF EXISTS compra_tipo_condicion;
-DROP TABLE IF EXISTS compra_tipo_moneda;
-DROP TABLE IF EXISTS compra_tipo_medida;
-DROP TABLE IF EXISTS compra_tipo_area;
-*/
 
 CREATE TABLE compra_tipo_cargo(
 	id int not null AUTO_INCREMENT,
