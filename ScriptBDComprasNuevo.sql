@@ -17,6 +17,7 @@ DROP TABLE IF EXISTS compra_tipo_compra;
 DROP TABLE IF EXISTS compra_tipo_banco;
 DROP TABLE IF EXISTS compra_tipo_condicion;
 DROP TABLE IF EXISTS compra_tipo_moneda;
+DROP TABLE IF EXISTS compra_tipo_plazo;
 DROP TABLE IF EXISTS compra_tipo_medida;
 DROP TABLE IF EXISTS compra_tipo_area;
 
@@ -252,7 +253,6 @@ CREATE TABLE compra_tipo_moneda(
 	PRIMARY KEY(id)
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-DROP TABLE compra_tipo_plazo;
 CREATE TABLE compra_tipo_plazo(
 	id int not null AUTO_INCREMENT,
 	descripcion varchar(100) not null,
