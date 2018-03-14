@@ -1,4 +1,15 @@
-/*
+-- tablas finales
+DROP TABLE IF EXISTS compra_solicitud;
+DROP TABLE IF EXISTS compra_solicitud_detalle;
+DROP TABLE IF EXISTS compra_solicitud_recepcion;
+DROP TABLE IF EXISTS compra_autorizacion; 
+DROP TABLE IF EXISTS compra_proveedor; 
+DROP TABLE IF EXISTS compra_proveedor_iso; 
+DROP TABLE IF EXISTS app_usuario_perfil ;
+DROP TABLE IF EXISTS app_usuario; 
+DROP TABLE IF EXISTS app_empresa;
+
+-- tablas de parametros
 DROP TABLE IF EXISTS compra_tipo_cargo;
 DROP TABLE IF EXISTS compra_tipo_documento;
 DROP TABLE IF EXISTS compra_tipo_solicitud;
@@ -9,7 +20,6 @@ DROP TABLE IF EXISTS compra_tipo_condicion;
 DROP TABLE IF EXISTS compra_tipo_moneda;
 DROP TABLE IF EXISTS compra_tipo_medida;
 DROP TABLE IF EXISTS compra_tipo_area;
-*/
 
 CREATE TABLE `compra_solicitud` (
   id int(6) NOT NULL,
