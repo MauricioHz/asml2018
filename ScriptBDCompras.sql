@@ -93,7 +93,7 @@ CREATE TABLE `compra_solicitud` (
 
 
 CREATE TABLE compra_solicitud_detalle (
-  id int(6) NOT NULL,
+  id int(6) NOT NULL,		
   solicitud_id int(6) DEFAULT NULL,
   tipo_area_id int(6) NOT NULL,
   tipo_compra_id int(6) NOT NULL,
@@ -181,7 +181,6 @@ CREATE TABLE compra_proveedor_iso (
 
 CREATE TABLE app_perfil_usuario(
 	id int not null AUTO_INCREMENT,
-	empresa_id int not null,
 	descripcion varchar(100) not null,
 	vigente int not null DEFAULT 1,
 	updated_at datetime NOT NULL,
@@ -209,22 +208,9 @@ CREATE TABLE app_usuario (
   PRIMARY KEY(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
-CREATE TABLE app_empresa(
-	id int(2) not null AUTO_INCREMENT,
-	rut int(8) not null,
-	dv varchar(1) not null,
-	razon_social varchar(200) not null,
-	descripcion varchar(200) not null,
-	vigente int not null DEFAULT 1,
-	PRIMARY KEY(id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- DATOS
 
-INSERT INTO `app_empresa` (`id`, `rut`, `dv`, `razon_social`, `descripcion`, `vigente`) 
-VALUES 
-(NULL, '96651330', '6', 'AGRICOLA SANTA MARTA DE LIRAY SA.', 'EMPRESA AGRICOLA', '1'), 
-(NULL, '14127721', '9', 'MAURICIOHZ', 'EMPRESA INFORMATICA', '1')
 
 -- // Fin version simplificada
 -- *******************************************************************************************
@@ -236,26 +222,12 @@ VALUES
 -- PARAMATROS
 -- ---------------------------------------------------
 
-CREATE TABLE app_empresa(
-	id int not null AUTO_INCREMENT,
-	rut int not null,
-	dv int not null,
-	descripcion varchar(200) not null,
-	vigente int not null DEFAULT 1,
-  	updated_at datetime NOT NULL,
-  	created_at datetime NOT NULL,
-  	deleted_at datetime NOT NULL,
-	PRIMARY KEY(id)
-)ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-
--->
 DROP TABLE compra_tipo_cargo;
 DROP TABLE compra_tipo_documento;
 DROP TABLE compra_tipo_solicitud;
 DROP TABLE compra_tipo_cuenta;
 DROP TABLE compra_tipo_compra;
-DROP TABLE compra_banco;
+DROP TABLE compra_tipo_banco;
 DROP TABLE compra_tipo_condicion;
 DROP TABLE compra_tipo_moneda;
 DROP TABLE compra_tipo_medida;
@@ -263,7 +235,6 @@ DROP TABLE compra_tipo_area;
 
 CREATE TABLE compra_tipo_cargo(
 	id int not null AUTO_INCREMENT,
-	empresa_id int not null,
 	descripcion varchar(100) not null,
 	vigente int not null DEFAULT 1,
 	updated_at datetime NOT NULL,
@@ -274,7 +245,6 @@ CREATE TABLE compra_tipo_cargo(
 
 CREATE TABLE compra_tipo_documento(
 	id int not null AUTO_INCREMENT,
-	empresa_id int not null,
 	descripcion varchar(100) not null,
 	vigente int not null DEFAULT 1,
 	updated_at datetime NOT NULL,
@@ -285,7 +255,6 @@ CREATE TABLE compra_tipo_documento(
 
 CREATE TABLE compra_tipo_cuenta(
 	id int not null AUTO_INCREMENT,
-	empresa_id int not null,
 	descripcion varchar(100) not null,
 	vigente int not null DEFAULT 1,
 	updated_at datetime NOT NULL,
@@ -306,7 +275,6 @@ CREATE TABLE compra_tipo_solicitud(
 
 CREATE TABLE compra_tipo_compra(
 	id int not null AUTO_INCREMENT,
-	empresa_id int not null,
 	descripcion varchar(100) not null,
 	vigente int not null DEFAULT 1,
 	updated_at datetime NOT NULL,
@@ -315,9 +283,8 @@ CREATE TABLE compra_tipo_compra(
 	PRIMARY KEY(id)
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE compra_banco(
+CREATE TABLE compra_tipo_banco(
 	id int not null AUTO_INCREMENT,
-	empresa_id int not null,
 	descripcion varchar(100) not null,
 	vigente int not null DEFAULT 1,
 	updated_at datetime NOT NULL,
@@ -328,7 +295,6 @@ CREATE TABLE compra_banco(
 
 CREATE TABLE compra_tipo_condicion(
 	id int not null AUTO_INCREMENT,
-	empresa_id int not null,
 	descripcion varchar(100) not null,
 	vigente int not null DEFAULT 1,
 	updated_at datetime NOT NULL,
@@ -339,7 +305,6 @@ CREATE TABLE compra_tipo_condicion(
 
 CREATE TABLE compra_tipo_moneda(
 	id int not null AUTO_INCREMENT,
-	empresa_id int not null,
 	descripcion varchar(100) not null,
 	vigente int not null DEFAULT 1,
 	updated_at datetime NOT NULL,
@@ -351,7 +316,6 @@ CREATE TABLE compra_tipo_moneda(
 DROP TABLE compra_tipo_plazo;
 CREATE TABLE compra_tipo_plazo(
 	id int not null AUTO_INCREMENT,
-	empresa_id int not null,
 	descripcion varchar(100) not null,
 	vigente int not null DEFAULT 1,
 	updated_at datetime NOT NULL,
@@ -362,7 +326,6 @@ CREATE TABLE compra_tipo_plazo(
 
 CREATE TABLE compra_tipo_medida(
 	id int not null AUTO_INCREMENT,
-	empresa_id int not null,
 	descripcion varchar(100) not null,
 	vigente int not null DEFAULT 1,
 	updated_at datetime NOT NULL,
@@ -373,7 +336,6 @@ CREATE TABLE compra_tipo_medida(
 
 CREATE TABLE compra_tipo_area(
 	id int not null AUTO_INCREMENT,
-	empresa_id int not null,
 	descripcion varchar(100) not null,
 	vigente int not null DEFAULT 1,
 	updated_at datetime NOT NULL,
