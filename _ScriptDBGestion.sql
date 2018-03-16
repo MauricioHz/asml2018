@@ -301,4 +301,51 @@ md tipo_requisito;
 md tipo_accion;
 md tipo_hallazgo;
 
+-->
+
+
+
+Por ejemplo, para copiar todos los archivos de la carpeta 
+Documentos en el Escritorio, ejecuta el comando 
+
+C:\Users\Equipo\Documentos\*.* C:\Users\Equipo\Escritorio. 
+
+copy C:\Users\PC_BTSYS_01\Desktop\test\t1\f1.txt C:\Users\PC_BTSYS_01\Desktop\test\t2
+
+copy c:\templateCrud\index.blade.php c:\ruta\carpeta-reemplazar
+
+copy templateCrud\*.* c:\ruta\carpeta-reemplazar
+
+--> c:\templateCrud\index.blade.php
+--> c:\templateCrud\create.blade.php
+--> c:\templateCrud\edit.blade.php
+--> c:\templateCrud\show.blade.php
+--> c:\templateCrud\update.blade.php
+--> c:\templateCrud\delete.blade.php
+
+copy c:\templateCrud\*.* c:\ruta\accion_inmediata;
+copy c:\templateCrud\*.* c:\ruta\analisis_causa;
+copy c:\templateCrud\*.* c:\ruta\eficacia;
+copy c:\templateCrud\*.* c:\ruta\equipo_designado;
+copy c:\templateCrud\*.* c:\ruta\noconformidad;
+copy c:\templateCrud\*.* c:\ruta\accion_inmediata;
+copy c:\templateCrud\*.* c:\ruta\requisito;
+copy c:\templateCrud\*.* c:\ruta\verifica;
+copy c:\templateCrud\*.* c:\ruta\encargado_iso;
+copy c:\templateCrud\*.* c:\ruta\tipo_estado;
+copy c:\templateCrud\*.* c:\ruta\tipo_perfil;
+copy c:\templateCrud\*.* c:\ruta\tipo_cargo;
+copy c:\templateCrud\*.* c:\ruta\tipo_area;
+copy c:\templateCrud\*.* c:\ruta\tipo_responsable;
+copy c:\templateCrud\*.* c:\ruta\tipo_cargo;
+copy c:\templateCrud\*.* c:\ruta\tipo_director;
+copy c:\templateCrud\*.* c:\ruta\tipo_estado;
+copy c:\templateCrud\*.* c:\ruta\tipo_origen;
+copy c:\templateCrud\*.* c:\ruta\tipo_proceso;
+copy c:\templateCrud\*.* c:\ruta\tipo_responsable;
+copy c:\templateCrud\*.* c:\ruta\tipo_rol;
+copy c:\templateCrud\*.* c:\ruta\tipo_requisito;
+copy c:\templateCrud\*.* c:\ruta\tipo_accion;
+copy c:\templateCrud\*.* c:\ruta\tipo_hallazgo;
+
 */
