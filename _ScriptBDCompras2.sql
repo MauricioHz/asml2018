@@ -1,4 +1,34 @@
 
+CREATE TABLE compra_reembolso(
+  id int(6) NOT NULL,
+  forma_pago_id int(6) NOT NULL,
+  rut varchar(12) NOT NULL,
+  nombre varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
+  apellido_paterno varchar(80) COLLATE utf8_spanish_ci DEFAULT NULL,
+  apellido_materno varchar(80) COLLATE utf8_spanish_ci DEFAULT NULL,
+  vigente int not null DEFAULT 1,
+  updated_at datetime NOT NULL,
+  created_at datetime NOT NULL,
+  deleted_at datetime NOT NULL,
+  PRIMARY KEY(id)
+);
+
+CREATE TABLE compra_transferencia(
+  id int(6) NOT NULL,
+  forma_pago_id int(6) NOT NULL,
+  rut varchar(12) NOT NULL,
+  banco varchar(100) NOT NULL,
+  tipo_cuenta varchar(100) NOT NULL,
+  numero_cuenta varchar(100) NOT NULL,
+  vigente int not null DEFAULT 1,
+  updated_at datetime NOT NULL,
+  created_at datetime NOT NULL,
+  deleted_at datetime NOT NULL,
+  PRIMARY KEY(id)
+	
+);
+
+
 CREATE TABLE `compra_solicitud` (
   id int(6) NOT NULL,
   fecha date DEFAULT NULL,
