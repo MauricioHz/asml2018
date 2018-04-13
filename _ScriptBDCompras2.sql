@@ -18,6 +18,10 @@ CREATE TABLE compra_proveedor_pago(
 	PRIMARY KEY(id)	
 );
 
+ALTER TABLE `compra_proveedor_pago` CHANGE `updated_at` `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
+ALTER TABLE `compra_proveedor_pago` CHANGE `created_at` `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
+ALTER TABLE `compra_proveedor_pago` CHANGE `deleted_at` `deleted_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
+
 CREATE TABLE compra_reembolso(
   id int(6) NOT NULL,
   forma_pago_id int(6) NOT NULL,
