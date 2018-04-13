@@ -1,4 +1,23 @@
 
+CREATE TABLE compra_proveedor_pago(
+	id int(6) NOT NULL,
+	forma_pago int not null,
+	nueva_forma_pago varchar(80) COLLATE utf8_spanish_ci DEFAULT NULL,
+	moneda_cotizacion int not null,
+	nueva_moneda_cotizacion varchar(80) COLLATE utf8_spanish_ci DEFAULT NULL,
+	moneda_pago int not null,
+	nueva_moneda_pago varchar(80) COLLATE utf8_spanish_ci DEFAULT NULL,
+	condicion_pago int not null,
+	nueva_condicion_pago varchar(80) COLLATE utf8_spanish_ci DEFAULT NULL,
+	plazo_pago int not null,
+	nuevo_plazo_pago varchar(80) COLLATE utf8_spanish_ci DEFAULT NULL,
+	vigente int not null DEFAULT 1,
+	updated_at datetime NOT NULL,
+	created_at datetime NOT NULL,
+	deleted_at datetime NOT NULL,
+	PRIMARY KEY(id)	
+);
+
 CREATE TABLE compra_reembolso(
   id int(6) NOT NULL,
   forma_pago_id int(6) NOT NULL,
