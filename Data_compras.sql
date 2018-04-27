@@ -8,6 +8,7 @@ INSERT INTO compra_tipo_solicitud(descripcion) VALUES
 TRUNCATE TABLE compra_tipo_plazo;
 INSERT INTO compra_tipo_plazo (descripcion) VALUES
 ('7 DIAS'),
+('5 DIAS'),
 ('10 DIAS'),
 ('15 DIAS'),
 ('30 DIAS'),
@@ -42,11 +43,12 @@ INSERT INTO compra_tipo_medida(descripcion) VALUES
 
 TRUNCATE TABLE compra_tipo_forma_pago;
 INSERT INTO compra_tipo_forma_pago(descripcion) VALUES
-('Efectivo'),
-('Reembolso a tercero'),
-('Tarjeta de credito empresa'),
-('Transferencia a CTA. CTE. proveedor'),
-('Vale vista');
+('CHEQUE'),
+('EFECTIVO'),
+('REEMBOLSO A TERCEROS'),
+('TARJETA DE CREDITO EMPRESA'),
+('TRANSFERENCIA A CTA. CTE. PROVEEDOR'),
+('VALE VISTA');
 
 TRUNCATE TABLE compra_tipo_solicitud;
 INSERT INTO compra_tipo_solicitud (descripcion) VALUES 
@@ -106,6 +108,7 @@ TRUNCATE TABLE compra_tipo_cargo;
 INSERT INTO compra_tipo_cargo(descripcion) 
 VALUES ('JEFATURA');
 
+TRUNCATE TABLE compra_tipo_banco;
 INSERT INTO compra_tipo_banco(descripcion) 
 VALUES ('BCI-TBANC-NOVA'),
 ('BANCO BICE'),
