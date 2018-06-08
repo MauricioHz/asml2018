@@ -1,1 +1,2 @@
 
+Modulo principal para acceder a las aplicaciones.
