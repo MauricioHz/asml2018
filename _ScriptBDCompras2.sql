@@ -56,7 +56,7 @@ CREATE TABLE `compra_proveedor_iso` (
   `vigente` int(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 /*
-$table->integer('id');
+$table->primary('id');
 $table->integer('rut');
 $table->string('dv');
 $table->string('razon_social', 200);
@@ -64,42 +64,48 @@ $table->string('nombre_comercial', 200);
 $table->string('direccion', 400);
 $table->string('comuna', 200);
 $table->string('ciudad', 200);
-$table->string('fono', 30);
-$table->string('fax', 30);
-$table->string('email', 100);
-$table->string('email_contacto', 100);
-$table->string('contacto', 200);
-$table->string('observaciones', 800);
+$table->string('fono', 30)->nullable();
+$table->string('fax', 30)->nullable();
+$table->string('email', 100)->nullable();
+$table->string('email_contacto', 100)->nullable();
+$table->string('contacto', 200)->nullable();;
+$table->string('observaciones', 800)->nullable();
 $table->string('forma_pago', 50);
-$table->string('nueva_forma_pago', 50);
+$table->string('nueva_forma_pago', 50)->nullable();
 $table->string('moneda_cotizacion', 15);
-$table->string('nueva_moneda_cotizacion', 15);
+$table->string('nueva_moneda_cotizacion', 15)->nullable();
 $table->string('moneda_pago', 15);
-$table->string('nueva_moneda_pago', 15);
+$table->string('nueva_moneda_pago', 15)->nullable();
 $table->string('condicion_pago', 50);
-$table->string('nueva_condicion_pago', 50);
+$table->string('nueva_condicion_pago', 50)->nullable();
 $table->string('plazo_pago', 50);
-$table->string('nuevo_plazo_pago', 50);
-$table->string('rut_reembolso', 12);
-$table->string('nombre', 100);
-$table->string('apellido_paterno', 100);
-$table->string('apellido_materno', 100);
-$table->string('banco', 300);
-$table->string('tipo_cuenta', 50);
-$table->string('numero_cuenta', 50);
+$table->string('nuevo_plazo_pago', 50)->nullable();
+$table->string('rut_reembolso', 12)->nullable();
+$table->string('nombre', 100)->nullable();
+$table->string('apellido_paterno', 100)->nullable();
+$table->string('apellido_materno', 100)->nullable();
+$table->string('banco', 300)->nullable();
+$table->string('tipo_cuenta', 50)->nullable();
+$table->string('numero_cuenta', 50)->nullable();
+$table->integer('vigente')->default(1);
 
 iso:
-$table->integer('id');
-$table->string('forma_pago', 100);
-$table->string('nueva_forma_pago', 100);
-$table->string('moneda_cotizacion', 100);
-$table->string('nueva_moneda_cotizacion', 100);
-$table->string('moneda_pago', 100);
-$table->string('nueva_moneda_pago', 100);
-$table->string('condicion_pago', 100);
-$table->string('nueva_condicion_pago', 100);
-$table->string('plazo_pago', 100);
-$table->string('nuevo_plazo_pago', 100);
+$table->primary('id');
+$table->string('rut', 100);
+$table->string('pagina_web', 200);
+$table->string('tipo_insumo', 200);
+$table->string('aprobador_interno', 100);
+$table->date('fecha_ingreso', 100);
+$table->date('fecha_aprobacion', 100);
+$table->string('monto_plazo', 100);
+$table->string('acreditacion', 100);
+$table->string('horario', 100);
+$table->string('tiempo_entrega', 100);
+$table->string('ficha_tecnica', 100);
+$table->string('devoluciones', 100);
+$table->string('giro', 100);
+$table->string('extranjero', 100); 
+$table->integer('vigente')->default(1);
 */
 
 CREATE TABLE compra_proveedor_pago(
