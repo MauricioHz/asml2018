@@ -55,6 +55,52 @@ CREATE TABLE `compra_proveedor_iso` (
   `extranjero` varchar(5) COLLATE utf8_spanish_ci NOT NULL,
   `vigente` int(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+/*
+$table->integer('id');
+$table->integer('rut');
+$table->string('dv');
+$table->string('razon_social', 200);
+$table->string('nombre_comercial', 200);
+$table->string('direccion', 400);
+$table->string('comuna', 200);
+$table->string('ciudad', 200);
+$table->string('fono', 30);
+$table->string('fax', 30);
+$table->string('email', 100);
+$table->string('email_contacto', 100);
+$table->string('contacto', 200);
+$table->string('observaciones', 800);
+$table->string('forma_pago', 50);
+$table->string('nueva_forma_pago', 50);
+$table->string('moneda_cotizacion', 15);
+$table->string('nueva_moneda_cotizacion', 15);
+$table->string('moneda_pago', 15);
+$table->string('nueva_moneda_pago', 15);
+$table->string('condicion_pago', 50);
+$table->string('nueva_condicion_pago', 50);
+$table->string('plazo_pago', 50);
+$table->string('nuevo_plazo_pago', 50);
+$table->string('rut_reembolso', 12);
+$table->string('nombre', 100);
+$table->string('apellido_paterno', 100);
+$table->string('apellido_materno', 100);
+$table->string('banco', 300);
+$table->string('tipo_cuenta', 50);
+$table->string('numero_cuenta', 50);
+
+iso:
+$table->integer('id');
+$table->string('forma_pago', 100);
+$table->string('nueva_forma_pago', 100);
+$table->string('moneda_cotizacion', 100);
+$table->string('nueva_moneda_cotizacion', 100);
+$table->string('moneda_pago', 100);
+$table->string('nueva_moneda_pago', 100);
+$table->string('condicion_pago', 100);
+$table->string('nueva_condicion_pago', 100);
+$table->string('plazo_pago', 100);
+$table->string('nuevo_plazo_pago', 100);
+*/
 
 CREATE TABLE compra_proveedor_pago(
 	id int(6) NOT NULL,
