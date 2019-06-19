@@ -444,3 +444,12 @@ CREATE TABLE compra_tipo_area(
 	deleted_at datetime NOT NULL,
 	PRIMARY KEY(id)
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*
+// compra_tipo_area
+
+$table->primary('id');
+$table->string('nombre', 200);
+$table->integer('vigente');
+
+*/
