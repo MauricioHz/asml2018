@@ -10,6 +10,16 @@ public function up()
  });
 }
 
+// Método generico.
+public function up()
+{
+  Schema::create('tabla', function (Blueprint $table) {
+  $table->increments('id');
+  $table->string('descripcion', 300)->comment('my comment');
+  $table->integer('vigente')->default(1);
+  $table->timestamps();
+ });
+}
 
 
 Use santamar_asmldesarrollo;
