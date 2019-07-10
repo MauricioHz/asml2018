@@ -1,3 +1,17 @@
+
+// Método para todos los parámetros.
+public function up()
+{
+  Schema::create('tabla', function (Blueprint $table) {
+  $table->increments('id');
+  $table->string('descripcion', 300);
+  $table->integer('vigente')->default(1);
+  $table->timestamps();
+ });
+}
+
+
+
 Use santamar_asmldesarrollo;
 
 DROP TABLE IF EXISTS gestion_accion_inmediata;
