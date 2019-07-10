@@ -24,7 +24,7 @@ public function up()
 
  gestion_accion_inmediata 
   id int(6) NOT NULL COMMENT 'identificador del registro',
-$table->string('noconformidad_id int(6) NOT NULL COMMENT 'número de no conformidad',
+$table->string('noconformidad_id', 10)->comment('número de no conformidad');
   area_id varchar(4) CHARACTER SET utf8 DEFAULT NULL COMMENT 'registra el área causante de la no conformidad',
   responsable_id varchar(4) COLLATE utf8_spanish_ci DEFAULT NULL COMMENT 'responsable de la acción inmediata que fue implementada',
   fecha_implementacion datetime DEFAULT NULL COMMENT 'fecha seleccionada por el usuario',
