@@ -29,6 +29,53 @@ $table->integer('responsable_id')->comment('responsable de la acción inmediata 
 $table->dateTime('fecha_implementacion')->comment ('fecha seleccionada por el usuario');
 $table->integer('vigente')->default (1);
   
+--> gestion_analisis_causa 
+$table->integer('noconformidad_id', 10)->comment('número de no conformidad');
+$table->dateTime('fecha_analisis_causa');
+$table->integer('tipo_accion');
+$table->dateTime('detalle_analisis_causa varchar(600) COLLATE utf8_spanish_ci NOT NULL,
+$table->integer('responsable_1');
+$table->dateTime('fecha_implementacion_1');
+$table->dateTime('fecha_implementacion_2');
+$table->integer('miembro_direccion_aprueba');
+$table->integer('responsable_2');
+$table->dateTime('fecha_implementacion_3');
+$table->string('descripcion_accion_seguir');
+$table->integer('usuario_id');
+
+--> gestion_eficacia  
+$table->integer('noconformidad_id');
+$table->integer('respuesta');
+$table->integer('responsable_id');
+$table->dateTime('fecha_cierre');
+  
+--> gestion_equipo_designado
+$table->integer('noconformidad_id');
+$table->string('num_ac'); // revisar
+$table->integer('cargo_1');
+$table->integer('cargo_2');
+$table->integer('encargado_iso');
+$table->dateTime('fecha_revision');
+$table->time('hora');
+$table->string('correo');
+$table->integer('usuario_id');
+$table->string('cargo_area_causante');
+$table->string('cargo_area_detecta');
+$table->integer('usuario_id2');
+
+--> gestion_noconformidad
+$table->integer('noconformidad_id');
+$table->dateTime('fecha_deteccion');
+$table->integer('cargo_detecta');
+$table->integer('area_detecta');
+$table->integer('tipo_hallazgo');
+$table->integer('origen_hallazgo');
+$table->integer('proceso_afectado');
+$table->string('detalle_hallazgo');
+$table->string('descripcion_hallazgo');
+$table->string('archivo_1');
+$table->string('archivo_2');
+$table->integer('usuario_id');
 
 
 
